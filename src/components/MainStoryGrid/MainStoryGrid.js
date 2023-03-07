@@ -1,11 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import {
-  MAIN_STORY,
-  OPINION_STORIES,
-  SECONDARY_STORIES,
-} from '../../data';
+import { MAIN_STORY, OPINION_STORIES, SECONDARY_STORIES } from '../../data';
 
 import SectionTitle from '../SectionTitle';
 import MainStory from '../MainStory';
@@ -32,7 +28,9 @@ const MainStoryGrid = () => {
         <SectionTitle>Opinion</SectionTitle>
         <StoryList>
           {OPINION_STORIES.map((story, index) => (
-            <OpinionStory key={story.id} {...story} />
+            <>
+              <OpinionStory key={story.id} {...story} />
+            </>
           ))}
         </StoryList>
       </OpinionSection>
